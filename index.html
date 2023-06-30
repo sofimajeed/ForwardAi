@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="./index.css">
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div class="">
+    <div class="main-divs">
+      <!-- <div class="col-md-3"> -->
+      <div id="mySidebar" class="sidebar">
+
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <h3><i class="fa fa-circle-o" aria-hidden="true"></i>Merkury</h3>
+        <div><i class="fa fa-home" aria-hidden="true"></i> Home</div>
+        <div> <i class="fa fa-tasks" aria-hidden="true"></i>Workflow</div>
+        <div><i class="fa fa-line-chart" aria-hidden="true"></i>Statistics</div>
+        <div><i class="fa fa-calendar" aria-hidden="true"></i>Calendar</div>
+        <div><i class="fa fa-user" aria-hidden="true"></i> Users</div>
+        <div><i class="fa fa-cog" aria-hidden="true"></i>Settings</div>
+      </div>
+      <div class="content">
+        <div id="main" class="display">
+          <div class="d-flex">
+            <span><i class="fa fa-bars" aria-hidden="true" class="openbtn" onclick="openNav()"></i></span>
+            <span class="search-span">
+              <nav class="navbar navbar-expand navbar-light bg-light search-bar">
+                <div class="collapse navbar-collapse" id="navbar1">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item d-flex">
+                      <div class="collapse fade" id="searchForm">
+                        <input id="search" type="search" class="form-control border-0 bg-light" placeholder="search" />
+                      </div>
+                      <a class="nav-link ml-auto" href="#searchForm" data-target="#searchForm" data-toggle="collapse">
+                        <i class="mdi mdi-magnify"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </span>
+          </div>
+          <div class="d-flex">
+            <span><button class="add-project"> + Add Project</button></span>
+            <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+            <span><i class="fa fa-bell" aria-hidden="true"></i></span>
+            <span>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img
+                    src="https://media.istockphoto.com/id/1435686874/photo/pensive-clever-indian-or-arabian-guy-student-or-freelancer-using-laptop-working-or-studying.jpg?s=1024x1024&w=is&k=20&c=5YTBiLmbqpaZUMHIiMxz4kTy3SHqEYYqbuc3yF1Qe9U="
+                    alt="">
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <a class="dropdown-item" type="button" href="https://github.com/sofimajeed">My Profile</a>
+                  <a class="dropdown-item" type="button" href="https://www.forwardai.com/forwardly">ForwardAI</a>
+                </div>
+              </div>
+            </span>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="main-body">
+              <div class="users">
+                <div>Users <span>(128)</span></div>
+                <div>
+                  <div class="dropdown show">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      sort: Active First
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <a class="dropdown-item" href="#">Latest</a>
+                      <a class="dropdown-item" href="#">Trending</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Last Activity</th>
+                    <th>Mail</th>
+                    <th>Phone</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="person-details">
+                        <div><img
+                            src="https://t3.ftcdn.net/jpg/02/99/04/20/360_F_299042079_vGBD7wIlSeNl7vOevWHiL93G4koMM967.jpg"
+                            alt=""></div>
+                        <div class="description">
+                          <div class="name">John Doe</div>
+                          <div class="designation">CEO</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="online"> <i class="fa fa-clock-o" aria-hidden="true"></i> Online now!</td>
+                    <td>johndoe@gmail.com</td>
+                    <td>(000) 111 222 333</td>
+                    <td><i class="fa fa-ellipsis-v" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="person-details">
+                        <div><img
+                            src="https://media.istockphoto.com/id/1461077577/photo/spring-portrait-of-excited-young-woman.jpg?s=1024x1024&w=is&k=20&c=omcVVJwN8tbu5R9DrM89A_XFgt64iOOVMg8xECfMOQI="
+                            alt=""></div>
+                        <div class="description">
+                          <div class="name">Nina Jones</div>
+                          <div class="designation">Ux Designer</div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td class="online"><i class="fa fa-clock-o" aria-hidden="true"></i> Online now!</td>
+                    <td>ninajones@design.com</td>
+                    <td>(000) 111 222 333</td>
+                    <td><i class="fa fa-ellipsis-v" aria-hidden="true"></i></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="person-details">
+                        <div><img
+                            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww&w=1000&q=80"
+                            alt=""></div>
+                        <div class="description">
+                          <div class="name">Alex Smith</div>
+                          <div class="designation">Web Designer</div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td class="online"><i class="fa fa-clock-o" aria-hidden="true"></i> Online now!</td>
+                    <td>alexsmith@design.com</td>
+                    <td>(000) 111 222 333</td>
+                    <td><i class="fa fa-ellipsis-v" aria-hidden="true"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="person-details">
+                        <div><img
+                            src="https://media.istockphoto.com/id/1440149713/photo/black-man-tablet-and-smile-for-social-media-post-shopping-online-or-browsing-internet.jpg?s=1024x1024&w=is&k=20&c=deMApX3LFnvQvqumEv5xxPjzkZgtJe_5zIak09Bxj80="
+                            alt=""></div>
+                        <div class="description">
+                          <div class="name">Ann Clooney</div>
+                          <div class="designation">Account Manager</div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 20 minutes ago</td>
+                    <td>annclooney@design.com</td>
+                    <td>(000) 111 222 333</td>
+                    <td><i class="fa fa-ellipsis-v" aria-hidden="true"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="person-details">
+                        <div><img
+                            src="https://media.istockphoto.com/id/1464605251/photo/portrait-of-a-senior-black-man-on-the-tennis-court.jpg?s=1024x1024&w=is&k=20&c=cVNPufS_pFVAmzf59WjT-dsCYs4kXdu2420khMjSFlA="
+                            alt=""></div>
+                        <div class="description">
+                          <div class="name">Patric Smith </div>
+                          <div class="designation">project Manager</div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 40 minutes ago</td>
+                    <td>patricsmith@design.com</td>
+                    <td>(000) 111 222 333</td>
+                    <td><i class="fa fa-ellipsis-v" aria-hidden="true"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="person-details">
+                        <div><img
+                            src="https://media.istockphoto.com/id/1403047562/photo/smart-and-thoughtful-mature-woman-holding-her-chin-and-pondering-idea-making-difficult.jpg?s=1024x1024&w=is&k=20&c=OfY_kWANr-IPgn51uY2-FATpp5fYZKaX2p5HmD81EXY="
+                            alt=""></div>
+                        <div class="description">
+                          <div class="name">Nicky Hunt</div>
+                          <div class="designation">Product Designer</div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 1 hour ago</td>
+                    <td>nickyhunt@design.com</td>
+                    <td>(000) 111 222 333</td>
+                    <td><i class="fa fa-ellipsis-v" aria-hidden="true"></i></td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="person-details">
+                        <div><img
+                            src="https://media.istockphoto.com/id/852733238/photo/studio-shot-of-young-handsome-teenage-boy-wearing-blue-shirt-against-colored-background.jpg?s=1024x1024&w=is&k=20&c=raGqS9Ya327abaUovZtMwDgpIWbpCuerokhhxDk8RpU="
+                            alt=""></div>
+                        <div class="description">
+                          <div class="name">Jane Doe</div>
+                          <div class="designation">Graphic Designer</div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 2 days ago</td>
+                    <td>janedoe@design.com</td>
+                    <td>(000) 111 222 333</td>
+                    <td><i class="fa fa-ellipsis-v" aria-hidden="true"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("mySidebar").style.display = "block";
+      // document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0px";
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("main").style.marginLeft = "0px";
+    }
+  </script>
+
+</body>
+
+</html>
